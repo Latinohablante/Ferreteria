@@ -6,7 +6,122 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Document</title>
 </head>
+<style>
+
+    h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .containerP{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(255, 255, 255);
+        width: 80%;
+        height: 500px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .Filtrado{
+        border: solid rgb(0, 0, 0);
+        width: 170px;
+    }
+    .productos{
+        border: solid rgb(255, 0, 0);
+        width: 100%;
+        margin-left:50px ;
+    }
+    .navnbar{
+        position: fixed;
+    }
+    footer,img{
+        width: 100%;
+    }
+
+</style>
 <body>
-    
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="">
+            <img src="./Imagenes/pag_principal/Free_Sample_By_Wix (1).jpg" width="auto" height="auto">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Inicio
+            </a>
+      
+            <a class="navbar-item">
+              Promociones
+            </a>
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Ver mas
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  Ver productos
+                </a>
+                <a class="navbar-item">
+                    Cotizar
+                  </a>
+                <a class="navbar-item">
+                  Contacto
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Quienes somos
+                </a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-success">
+                  <strong>Registrar</strong>
+                </a>
+                <a class="button is-light">
+                  Ingresar
+                </a>
+                <a class="button is-white" href="">
+                    <img src="./Imagenes/pag_principal/carritoCompras.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section class="imagen_inicio">
+        <img src="./Imagenes/pag_principal/Centro_inicio.jpg" alt="">
+      </section>
+      <h1>Productos</h1>
+      <header class="containerP">
+      <div class="Filtrado">
+
+      </div>
+      <div class="productos">
+
+      </div>
+    </header>
+    <footer class="columns box">
+        <div class="column">
+            <a href="">Quienes somos</a>
+            <a href="">Mas sobre nosotros</a>
+            <a href="">Puntos de venta</a>
+        </div>
+        <div></div>
+        <div></div>
+    </footer>
 </body>
 </html>
