@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-
+  
     h1{
         text-align: center;
         font-size: 30px;
@@ -16,25 +16,40 @@
         display: flex;
         flex-direction: row;
         background-color: rgb(255, 255, 255);
-        width: 80%;
+        width: 90%;
         height: 500px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
     .Filtrado{
         border: solid rgb(0, 0, 0);
-        width: 170px;
+        width: 200px;
     }
     .productos{
         border: solid rgb(255, 0, 0);
-        width: 100%;
+        width: 90%;
         margin-left:50px ;
     }
     .navnbar{
         position: fixed;
     }
-    footer,img{
+    .column{
         width: 100%;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    details,a{
+      color: black;
+      padding: 5px;
+    }
+    
+
+    details[open]{
+      background-color: rgba(123, 255, 108, 0.345);
+      color: black;
+      transition: all 0.5s ease-out;
     }
 
 </style>
@@ -102,26 +117,76 @@
           </div>
         </div>
       </nav>
+      <!--Primero que ve el usuario-->
       <section class="imagen_inicio">
         <img src="./Imagenes/pag_principal/Centro_inicio.jpg" alt="">
       </section>
       <h1>Productos</h1>
       <header class="containerP">
-      <div class="Filtrado">
-
+      <div class="Filtrado box">
+        <details name ="Prod">
+          <summary><a href="">Herramientas</a></summary>
+       <a href="">-Kits</a>
+        </details>
+        <details name ="Prod">
+          <summary>
+            <a href="">Corriente</a>
+          </summary>
+          <a href="">-Linternas</a> 
+          <br>
+            <a href="">-Bombillos</a>
+        </details>
+        <details name ="Prod">
+          <summary>
+            <a href="">Autos</a>
+          </summary>
+          <a href="">-Inversores de corriente</a>
+        </details>
+        <details name ="Prod">
+          <summary>
+            <a href="">Llantas</a>
+          </summary>
+          <a href="">-Sellador de llantas</a>
+          <br>
+          <a href="">-Crucetas para ruedas</a>
+        </details>
       </div>
-      <div class="productos">
-
+      <!--PONER PRODUCTOS A LA VISTA-->
+      <div class="productos box">
+        <div class="contenedorProductos">
+          <!--CONTENEDOR HERRAMIENTAS-->
+      <section class="Herramientas sc">
+         <h1>Herramientas</h1>
+         <section id="HerramientasTotal"></section>
+      </section>
+      <!--CONTENEDOR CORRIENTE-->
+      <section class="Corriente sc">
+      <h1>Corriente</h1>
+      <section id="CorrienteTotal" ></section>
+      </section>
+      <!--CONTENEDOR AUTOS-->
+      <section class=" autos sc">
+          <h1>Autos</h1>
+          <section id="autosP" ></section>
+          </section>
+      <!--CONTENEDOR LLANTAS-->
+              <section class="llantas sc">
+                  <h1>Llantas</h1>
+                  <section id="llantasP"></section>
+                  </section>
+      
+                
+      </div>
       </div>
     </header>
-    <footer class="columns box">
-        <div class="column">
-            <a href="">Quienes somos</a>
-            <a href="">Mas sobre nosotros</a>
-            <a href="">Puntos de venta</a>
-        </div>
-        <div></div>
-        <div></div>
-    </footer>
+    <!--Final de la pagina-->
+   <footer class="Footer columns box">
+  <div class="column">
+    primera
+  </div>
+  <div class="column">
+    segunda
+  </div>
+   </footer>
 </body>
 </html>
