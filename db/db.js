@@ -1,4 +1,6 @@
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import  {initializeApp}  from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import {getFirestore} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"
+
 
   const firebaseConfig = {
     apiKey: "AIzaSyAT2Qj9OkOke7-bc4uHsmsOm3DGBsNxU5o",
@@ -13,7 +15,8 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
+  // Initialize Cloud Firestore and get a reference to the service
+export const db = getFirestore(app);
 
 
-
-
+console.log("conexion a la base de datos establecida")
