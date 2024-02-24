@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+.containerP{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.Filtrado{
+    border: solid rgb(0, 0, 0);
+    width: 170px;
+}
+.productos{
+    border: solid rgb(255, 0, 0);
+    width: 100%;
+    margin-left:50px ;
+}
+.navnbar{
+    position: fixed;
+}
+footer,img{
+    width: 100%;
+}
