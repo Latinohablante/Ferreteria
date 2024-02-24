@@ -71,16 +71,66 @@
           </div>
         </div>
       </nav>
+      <!--Primero que ve el usuario-->
       <section class="imagen_inicio">
         <img src="./Imagenes/pag_principal/Centro_inicio.jpg" alt="">
       </section>
       <h1>Productos</h1>
       <header class="containerP">
-      <div class="Filtrado">
-
+      <div class="Filtrado box">
+        <details name ="Prod">
+          <summary><a href="">Herramientas</a></summary>
+       <a href="">-Kits</a>
+        </details>
+        <details name ="Prod">
+          <summary>
+            <a href="">Corriente</a>
+          </summary>
+          <a href="">-Linternas</a> 
+          <br>
+            <a href="">-Bombillos</a>
+        </details>
+        <details name ="Prod">
+          <summary>
+            <a href="">Autos</a>
+          </summary>
+          <a href="">-Inversores de corriente</a>
+        </details>
+        <details name ="Prod">
+          <summary>
+            <a href="">Llantas</a>
+          </summary>
+          <a href="">-Sellador de llantas</a>
+          <br>
+          <a href="">-Crucetas para ruedas</a>
+        </details>
       </div>
-      <div class="productos">
-
+      <!--PONER PRODUCTOS A LA VISTA-->
+      <div class="productos box">
+        <div class="contenedorProductos">
+          <!--CONTENEDOR HERRAMIENTAS-->
+      <section class="Herramientas sc">
+         <h1>Herramientas</h1>
+         <section id="HerramientasTotal"></section>
+      </section>
+      <!--CONTENEDOR CORRIENTE-->
+      <section class="Corriente sc">
+      <h1>Corriente</h1>
+      <section id="CorrienteTotal" ></section>
+      </section>
+      <!--CONTENEDOR AUTOS-->
+      <section class=" autos sc">
+          <h1>Autos</h1>
+          <section id="autosP" ></section>
+          </section>
+      <!--CONTENEDOR LLANTAS-->
+              <section class="llantas sc">
+                  <h1>Llantas</h1>
+                  <section id="llantasP"></section>
+                  </section>
+      
+                
+      </div>
       </div>
     </header>
     <footer class="columns box">
@@ -91,10 +141,6 @@
         </div>
         <div></div>
         <div></div>
-
-        <script type="module" src="./db/db.js">
-
-        </script>
     </footer>
 </body>
 </html>
