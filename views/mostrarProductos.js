@@ -6,32 +6,6 @@ control("ObtenerProducto");
 let categorias = [];
 
 
-export function Mostrarproductos(data) {
-  console.log(data);
-
-  //
-  if (Array.isArray(data) && data.length > 0) {
-
-    data.forEach(producto => {
-      if (producto.categoria) {
-
-        if (!categorias[producto.categoria]) {
-          categorias[producto.categoria] = [];
-        }
-        categorias[producto.categoria].push(producto);
-      } else {
-        console.error("El producto no tiene una propiedad 'categoria' definida.");
-      }
-    });
-
-    console.log(categorias);
-
-    mostrarProductosEnHTML(categorias);
-  } else {
-    console.error("La respuesta del servidor no es un array válido o está vacía.");
-  }
-}
-
 function mostrarProductosEnHTML(categorias) {
   for (const categoria in categorias) {
     if (categorias.hasOwnProperty(categoria)) {
@@ -60,6 +34,35 @@ function mostrarProductosEnHTML(categorias) {
     }
   }
 }
+
+
+export function Mostrarproductos(data) {
+  console.log(data);
+
+  //
+  if (Array.isArray(data) && data.length > 0) {
+
+    data.forEach(producto => {
+      if (producto.categoria) {
+
+        if (!categorias[producto.categoria]) {
+          categorias[producto.categoria] = [];
+        }
+        categorias[producto.categoria].push(producto);
+      } else {
+        console.error("El producto no tiene una propiedad 'categoria' definida.");
+      }
+    });
+
+    console.log(categorias);
+
+    mostrarProductosEnHTML(categorias);
+  } else {
+    console.error("La respuesta del servidor no es un array válido o está vacía.");
+  }
+}
+
+
 let ves = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
