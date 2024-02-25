@@ -1,12 +1,17 @@
 import { get } from "../models/get.js"
 import { Mostrarproductos } from "../views/mostrarProductos.js";
+import { productosCategoria } from "../views/filter.js";
 
 
 export async function control(entidad){
-   switch (entidad) {
+    let datos = await get("productos");
+    switch (entidad) {
         case "ObtenerProducto":
-                let datos = await get("productos")
                 Mostrarproductos(datos)
+            break;
+
+        case "FiltrarProducto":
+                productosCategoria(datos)
             break;
     
         default:
