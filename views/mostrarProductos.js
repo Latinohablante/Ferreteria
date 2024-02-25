@@ -3,7 +3,7 @@ import { control } from "../controller/controller.js";
 control("ObtenerProducto");
 
 
-let categorias = {};
+let categorias = [];
 
 
 export function Mostrarproductos(data) {

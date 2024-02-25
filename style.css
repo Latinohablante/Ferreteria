@@ -3,9 +3,18 @@
 *{
     font-family: "PT Sans", sans-serif;
 }
+.navbar{
+    position: fixed;
+    width: 100%;
+ 
+}
+.imagen_inicio>img{
+    margin-top: 30px;
+}
 h1{
     text-align: center;
     font-size: 30px;
+    padding: 8px;
 }
 .containerP{
     display: flex;
@@ -16,9 +25,11 @@ h1{
     margin: 0 auto;
     margin-bottom: 20px;
 }
+
 .Filtrado{
  
     width: 200px;
+    height: 300px;
 }
 .productos{
     width: 100%;
@@ -45,9 +56,15 @@ footer,img{
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    border: solid 1px black;
+    transition: all 0.5 ease-in-out;
  
     }
+    .herramientasDIV:hover{
+        box-shadow: 2px 5px 5px 0px rgba(13, 13, 13, 0.522);
+        z-index: 2;
+        
+    }
+
     #HerramientasTotal{
         display: flex;
         width: 100%;
