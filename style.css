@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    font-family: "PT Sans", sans-serif;
+}
 h1{
     text-align: center;
     font-size: 30px;
@@ -7,18 +12,20 @@ h1{
     flex-direction: row;
     background-color: rgb(255, 255, 255);
     width: 80%;
-    height: 500px;
+    height: auto;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 .Filtrado{
-    border: solid rgb(0, 0, 0);
-    width: 170px;
+ 
+    width: 200px;
 }
 .productos{
-    border: solid rgb(255, 0, 0);
     width: 100%;
     margin-left:50px ;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }
 .navnbar{
     position: fixed;
@@ -26,3 +33,34 @@ h1{
 footer,img{
     width: 100%;
 }
+.herramientasDIV>img{
+    width: 200px;
+    height: 200px;
+}
+.herramientasDIV{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    border: solid 1px black;
+ 
+    }
+    #HerramientasTotal{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: row;
+        text-align: center;
+        gap: 10px; 
+        flex-wrap: wrap;
+    }
+    #contenedorPrecio{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin: 5px;
+    }
