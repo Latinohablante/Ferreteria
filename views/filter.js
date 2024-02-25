@@ -11,38 +11,40 @@ const mapCategorias = new Map([
 ])
 
 export function productosCategoria (data) {
-    //console.log(data);
+    //Declaración de variables
     let categoriaMap;
     let categoriaFiltrada= new Map();
     let productosFiltrados = [];
     let categoriaName;
     let sectionProducts = document.getElementById("HerramientasTotal");
+    let headProductos = document.getElementById("ProdTitulo");
     const summaryClass = document.getElementsByTagName("summary");
-    console.log("Divs: ", sectionProducts)
-    for (let i = 0; i< summaryClass.length; i++) {
+
+    //Iteración para cada una de las categorías
+        for (let i = 0; i< summaryClass.length; i++) {
         summaryClass[i].childNodes[0].addEventListener("click", (e) => {
             e.preventDefault();
             categoriaMap = mapCategorias.get(summaryClass[i].childNodes[0].innerText);
+
+            //Elimina todos los divs existentes en la sección con id "HerramientasTotales"
             while (sectionProducts.firstChild) {
                 sectionProducts.removeChild(sectionProducts.lastChild);
               }
-            //console.log(categoriaMap);
+            
+            //Se agarran todos los productos que coinciden con la categoría seleccionada
             data.forEach(el => {
                 if (el.categoria == categoriaMap) {
                     categoriaName = categoriaMap;
                     productosFiltrados.push(el);
                 }
             })
-            
+
+            //Se muestra en el HTML y se reinician variables para un siguiente evento
+            headProductos.innerHTML = `Productos <em>(${productosFiltrados.length} disponibles)</em>`
             categoriaFiltrada[categoriaName] = productosFiltrados;
-            //categoriaArrayMap.push(categoriaFiltrada);
-            console.log("categoria Filtrada",categoriaFiltrada[categoriaName]);
             mostrarProductosEnHTML(categoriaFiltrada);
             categoriaFiltrada = new Map();
-            console.log("Comprobar categoriaFiltrada", categoriaFiltrada)
             productosFiltrados = [];
         })    
     }
 }
-
-//productosCategoria();

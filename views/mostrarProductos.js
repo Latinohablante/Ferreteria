@@ -10,7 +10,7 @@ export function mostrarProductosEnHTML(categorias) {
   let productoHTML = "";
   for (const categoria in categorias) {
     if (categorias.hasOwnProperty(categoria)) {
-        console.log(categoria)
+        //console.log(categoria)
       const productos = categorias[categoria];
 
       const contenedor = document.getElementById('HerramientasTotal');
@@ -28,7 +28,6 @@ export function mostrarProductosEnHTML(categorias) {
           contenedor.innerHTML += productoHTML;
           
         });
-        console.log("productoHTML", productoHTML);
         
       } else {
         console.error(`No se encontró un contenedor para la categoría ${categoria}.`);
@@ -39,7 +38,7 @@ export function mostrarProductosEnHTML(categorias) {
 
 
 export function Mostrarproductos(data) {
-  console.log(data);
+  //console.log(data);
 
   //
   if (Array.isArray(data) && data.length > 0) {
@@ -56,7 +55,7 @@ export function Mostrarproductos(data) {
       }
     });
 
-    console.log(categorias);
+    //console.log(categorias);
 
     mostrarProductosEnHTML(categorias);
   } else {
