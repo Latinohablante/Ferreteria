@@ -33,13 +33,13 @@ export function productosCategoria (data) {
                     productosFiltrados.push(el);
                 }
             })
-            //console.log("map_Categorias", mapCategorias)
-            //console.log("Productos de la categoria", productosFiltrados);
+            
             categoriaFiltrada[categoriaName] = productosFiltrados;
             //categoriaArrayMap.push(categoriaFiltrada);
             console.log("categoria Filtrada",categoriaFiltrada[categoriaName]);
             mostrarProductosEnHTML(categoriaFiltrada);
-            categoriaFiltrada.clear();
+            categoriaFiltrada = new Map();
+            console.log("Comprobar categoriaFiltrada", categoriaFiltrada)
             productosFiltrados = [];
         })    
     }
