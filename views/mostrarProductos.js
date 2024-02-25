@@ -85,3 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 Mostrarproductos();
+
+//aqui ira lo del inicio de seccion y registro
+//variables eventos
+const registro = document.getElementById("Bresgistrar")
+const Inicio = document.getElementById("Binicio")
+
+registro.addEventListener("click",()=>{
+  
+})
+
+Inicio.addEventListener("click",()=>{
+  
+})
