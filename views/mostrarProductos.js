@@ -6,7 +6,8 @@ control("ObtenerProducto");
 let categorias = [];
 
 
-function mostrarProductosEnHTML(categorias) {
+export function mostrarProductosEnHTML(categorias) {
+  let productoHTML = "";
   for (const categoria in categorias) {
     if (categorias.hasOwnProperty(categoria)) {
         console.log(categoria)
@@ -16,7 +17,7 @@ function mostrarProductosEnHTML(categorias) {
       
       if (contenedor) {
         productos.forEach(producto => {
-          const productoHTML = `<div class="herramientasDIV box"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> Precio: ${producto.precio}
+          productoHTML = `<div class="herramientasDIV box"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> Precio: ${producto.precio}
           <div id="contenedorPrecio">
           <button class = "button is-link" id="disminuir">-</button>
           <p id="DatosContador">0</p>
@@ -27,6 +28,7 @@ function mostrarProductosEnHTML(categorias) {
           contenedor.innerHTML += productoHTML;
           
         });
+        console.log("productoHTML", productoHTML);
         
       } else {
         console.error(`No se encontró un contenedor para la categoría ${categoria}.`);
@@ -87,4 +89,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-Mostrarproductos();
+//Mostrarproductos();
