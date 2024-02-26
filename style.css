@@ -48,9 +48,13 @@ h1{
  display: flex;
  justify-content: center;
  align-items: center;
- margin: 0 auto;
  gap: 10px;
+ z-index: 10;
+ position: fixed;
+ 
+
 }
+
 .productos{
     width: 100%;
     margin: 0px 20px;
@@ -206,4 +210,5 @@ input{
     padding: 30px;
     margin: 10px;
 }
+
 
