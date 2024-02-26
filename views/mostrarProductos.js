@@ -89,21 +89,41 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const Registrar = document.getElementById("Bresgistrar")
-const DespIni = document.getElementById("Inicio")
-const contDes = document.getElementById("containerInicio")
+const DespReg = document.getElementById("Registro")
+const contDes = document.getElementById("containerRegistro")
 const BotonElim = document.getElementById("BotonElim")
+const BotonIngre = document.getElementById("Binicio")
+const DespIncio = document.getElementById("Inicio")
+const ContIni = document.getElementById("containerInicio")
+const BotonElim2 = document.getElementById("BotonElim2")
 
+//RegistroSesion
 Registrar.addEventListener("click", ()=>{
-  DespIni.classList.toggle("Inicio_sesion2")
-  contDes.classList.toggle("Inicio_sesion2")
+  DespReg.classList.toggle("Registro_sesion2")
+  contDes.classList.toggle("Registro_sesion2")
   contDes.style.display = (contDes.style.display === 'flex') ? 'none' : 'flex';
 
 }
 )
 BotonElim.addEventListener("click",()=>{
   contDes.style.display = (contDes.style.display === 'none') ? 'flex' : 'none';
-  DespIni.classList.toggle("Inicio_sesion2")
-  contDes.classList.toggle("Inicio_sesion2")
+  DespReg.classList.toggle("Registro_sesion2")
+  contDes.classList.toggle("Registro_sesion2")
 })
 
-//Mostrarproductos();
+//InicioSesion
+BotonIngre.addEventListener("click", ()=>{
+  DespIncio.classList.toggle("inicio_sesion2")
+  ContIni.classList.toggle("inicio_sesion2")
+  ContIni.style.display = (ContIni.style.display === 'flex') ? 'none' : 'flex';
+
+}
+)
+
+BotonElim2.addEventListener("click",()=>{
+  ContIni.style.display = (ContIni.style.display === 'none') ? 'flex' : 'none';
+  DespIncio.classList.toggle("Registro_sesion2")
+  ContIni.classList.toggle("Registro_sesion2")
+})
+
+

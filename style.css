@@ -104,14 +104,14 @@ footer,img{
         display: flex;
         flex-direction: column;
     }
-    .Inicio_sesion{
+    .Registro_sesion{
         display: none;
         width: 40%;
         height: auto;
         border: solid 2px black;
         text-align: center;
     }
-    .Inicio_sesion2{
+    .Registro_sesion2{
         display: flex;
         width: 30%;
         padding: 30px;
@@ -122,10 +122,9 @@ footer,img{
         align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        z-index: 3;
-       
+        z-index: 3;  
     }
-    #containerInicio{
+    #containerRegistro{
         width: 100%;
         height: 100vh;
         display: none;
@@ -133,13 +132,61 @@ footer,img{
         align-items: center;
         position: fixed;
         filter: blur(10);
-        
     }
- 
-
     #BotonElim{
     display: flex;
     justify-content: end;
     align-items: end;
     width: 100%;
     }
+    #containerInicio{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    filter: blur(10);
+  }
+  .inicio_sesion2{
+    display: flex;
+    width: 30%;
+    padding: 30px;
+    height: auto;
+    border: solid 1px rgba(0, 0, 0, 0.498);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    z-index: 3;  
+}
+.inicio_sesion{
+    display: flex;
+    width: 30%;
+    padding: 30px;
+    height: auto;
+    border: solid 1px rgba(0, 0, 0, 0.498);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    z-index: 3;  
+    text-align: center;
+}
+#BotonElim2{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    }
+
+.ing{
+    margin: 20px;
+}
+input{
+    padding: 30px;
+    margin: 10px;
+}
+

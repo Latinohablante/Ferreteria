@@ -20,3 +20,5 @@ export async function control(entidad){
 
 }
 
+
+
