@@ -76,9 +76,11 @@ footer,img{
         transform: scale(1.1);
     }
     .herramientasDIV button{
-        background-color: rgba(14, 106, 0, 0.525);
+        background-color: rgb(72, 199, 142);
         border: none;
         border-radius: 5px;
+        width: 30px;
+        height: 30px;
     }
 
     #HerramientasTotal{
