@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 *{
-    font-family: "PT Sans", sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar{
-    position: fixed;
+
+body{
+    padding: 0px 30px;
+    background-color: rgb(238, 243, 241);
+}
+
+.imagen_inicio{
     width: 100%;
- 
+    height: auto;
 }
+
+.navbar{
+    /* position: fixed; */
+    width: 100%;
+    border-radius: 10px;
+}
+
+
 .navbar-item>img{
     max-width: fit-content;
 }
@@ -20,23 +33,27 @@ h1{
     padding: 8px;
 }
 .containerP{
+    border-radius: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     background-color: rgb(255, 255, 255);
-    width: 80%;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
     margin-bottom: 20px;
 }
 
 .Filtrado{
- 
-    width: 200px;
-    height: 300px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ gap: 10px;
 }
 .productos{
     width: 100%;
-    margin-left:50px ;
+    margin: 0px 20px;
     display: flex;
     flex-direction: row;
     text-align: center;
