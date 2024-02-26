@@ -17,11 +17,11 @@ export function mostrarProductosEnHTML(categorias) {
       
       if (contenedor) {
         productos.forEach(producto => {
-          productoHTML = `<div class="herramientasDIV box"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> Precio: ${producto.precio}
+          productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> Precio: ${producto.precio}
           <div id="contenedorPrecio">
-          <button class = "button is-link" id="disminuir">-</button>
+          <button style="cursor: pointer ;" class = "is-primary" id="disminuir">-</button>
           <p id="DatosContador">0</p>
-          <button class = "button is-link" id="aumentar">+</button>
+          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>
           </div>
           </div> 
           `;
@@ -87,5 +87,23 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("No se encontraron algunos elementos en el DOM.");
   }
 });
+
+const Registrar = document.getElementById("Bresgistrar")
+const DespIni = document.getElementById("Inicio")
+const contDes = document.getElementById("containerInicio")
+const BotonElim = document.getElementById("BotonElim")
+
+Registrar.addEventListener("click", ()=>{
+  DespIni.classList.toggle("Inicio_sesion2")
+  contDes.classList.toggle("Inicio_sesion2")
+  contDes.style.display = (contDes.style.display === 'flex') ? 'none' : 'flex';
+
+}
+)
+BotonElim.addEventListener("click",()=>{
+  contDes.style.display = (contDes.style.display === 'none') ? 'flex' : 'none';
+  DespIni.classList.toggle("Inicio_sesion2")
+  contDes.classList.toggle("Inicio_sesion2")
+})
 
 //Mostrarproductos();

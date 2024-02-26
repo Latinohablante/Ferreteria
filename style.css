@@ -64,8 +64,21 @@ footer,img{
     }
     .herramientasDIV:hover{
         box-shadow: 2px 5px 5px 0px rgba(13, 13, 13, 0.522);
-        z-index: 2;
         
+    }
+    .herramientasDIV>img{
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        object-fit: cover;
+    }
+    .herramientasDIV>img:hover{
+        transform: scale(1.1);
+    }
+    .herramientasDIV button{
+        background-color: rgba(14, 106, 0, 0.525);
+        border: none;
+        border-radius: 5px;
     }
 
     #HerramientasTotal{
@@ -88,4 +101,43 @@ footer,img{
     footer>div{
         display: flex;
         flex-direction: column;
+    }
+    .Inicio_sesion{
+        display: none;
+        width: 40%;
+        height: auto;
+        border: solid 2px black;
+        text-align: center;
+    }
+    .Inicio_sesion2{
+        display: flex;
+        width: 30%;
+        padding: 30px;
+        height: auto;
+        border: solid 1px rgba(0, 0, 0, 0.498);
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        z-index: 3;
+       
+    }
+    #containerInicio{
+        width: 100%;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        filter: blur(10);
+        
+    }
+ 
+
+    #BotonElim{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
     }
