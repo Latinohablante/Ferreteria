@@ -27,9 +27,16 @@ export function mostrarProductosEnHTML(categorias) {
           Precio: ${producto.precio}
           </div>
           <div id="Botones-Cont">
-          <button style="cursor: pointer ;" class = "is-primary" id="disminuir">-</button>
-          <p id="DatosContador">0</p>
-          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>
+          <div class="field has-addons">
+          <div class="control">
+            <button class="button is-primary">-</button>
+          </div>
+          <div class="control">
+            <p id="P_0">0</p>         
+          </div>
+          <div class="control">
+            <button class="button is-primary">+</button>
+          </div>
           </div> 
           </div> 
           `;
