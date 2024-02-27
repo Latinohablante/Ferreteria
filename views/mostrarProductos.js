@@ -20,7 +20,10 @@ export function mostrarProductosEnHTML(categorias) {
       
       if (contenedor) {
         productos.forEach(producto => {
-          productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> Precio: ${producto.precio}
+          productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> 
+          <button style="cursor: pointer ;" class = "is-primary" id="disminuir">-</button>
+          <p id="DatosContador">0</p>
+          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>Precio: ${producto.precio}
           <div id="contenedorPrecio">
           </div>
           </div> 
@@ -64,30 +67,30 @@ export function Mostrarproductos(data) {
 
 let ves = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-  let contador = document.getElementById("DatosContador")
-  contador.textContent = 0;
+//   let contador = document.getElementById("DatosContador")
+//   contador.textContent = 0;
 
-  let cont = document.getElementById('aumentar');
-  let contMenos = document.getElementById('disminuir');
+//   let cont = document.getElementById('aumentar');
+//   let contMenos = document.getElementById('disminuir');
 
-  if (cont && contMenos && p) {
-    cont.addEventListener('click', () => {
-      ves++;
-      contador.textContent = ves;
-    });
+//   if (cont && contMenos && p) {
+//     cont.addEventListener('click', () => {
+//       ves++;
+//       contador.textContent = ves;
+//     });
 
-    contMenos.addEventListener('click', () => {
-      if (ves > 0) {
-        ves--;
-      }
-      contador.textContent = ves;
-    });
-  } else {
-    console.error("No se encontraron algunos elementos en el DOM.");
-  }
-});
+//     contMenos.addEventListener('click', () => {
+//       if (ves > 0) {
+//         ves--;
+//       }
+//       contador.textContent = ves;
+//     });
+//   } else {
+//     console.error("No se encontraron algunos elementos en el DOM.");
+//   }
+// });
 
 //window.addEventListener("DOMContentLoaded", function (event) {
     
