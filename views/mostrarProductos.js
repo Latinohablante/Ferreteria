@@ -1,9 +1,12 @@
 import { control } from "../controller/controller.js";
+import { registroUsuario} from "./registrousuario.js";
+import {} from "./iniciosesion.js" 
 
 control("ObtenerProducto");
 
 
 let categorias = [];
+let cont= 0
 
 
 export function mostrarProductosEnHTML(categorias) {
@@ -19,9 +22,6 @@ export function mostrarProductosEnHTML(categorias) {
         productos.forEach(producto => {
           productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> Precio: ${producto.precio}
           <div id="contenedorPrecio">
-          <button style="cursor: pointer ;" class = "is-primary" id="disminuir">-</button>
-          <p id="DatosContador">0</p>
-          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>
           </div>
           </div> 
           `;
@@ -38,8 +38,6 @@ export function mostrarProductosEnHTML(categorias) {
 
 
 export function Mostrarproductos(data) {
-  //console.log(data);
-
   //
   if (Array.isArray(data) && data.length > 0) {
 
@@ -67,63 +65,42 @@ export function Mostrarproductos(data) {
 let ves = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-  let p = document.getElementById('DatosContador');
+
+  let contador = document.getElementById("DatosContador")
+  contador.textContent = 0;
+
   let cont = document.getElementById('aumentar');
   let contMenos = document.getElementById('disminuir');
 
   if (cont && contMenos && p) {
     cont.addEventListener('click', () => {
       ves++;
-      p.textContent = ves;
+      contador.textContent = ves;
     });
 
     contMenos.addEventListener('click', () => {
       if (ves > 0) {
         ves--;
       }
-      p.textContent = ves;
+      contador.textContent = ves;
     });
   } else {
     console.error("No se encontraron algunos elementos en el DOM.");
   }
 });
 
-const Registrar = document.getElementById("Bresgistrar")
-const DespReg = document.getElementById("Registro")
-const contDes = document.getElementById("containerRegistro")
-const BotonElim = document.getElementById("BotonElim")
-const BotonIngre = document.getElementById("Binicio")
-const DespIncio = document.getElementById("Inicio")
-const ContIni = document.getElementById("containerInicio")
-const BotonElim2 = document.getElementById("BotonElim2")
+//window.addEventListener("DOMContentLoaded", function (event) {
+    
+//});
 
-//RegistroSesion
-Registrar.addEventListener("click", ()=>{
-  DespReg.classList.toggle("Registro_sesion2")
-  contDes.classList.toggle("Registro_sesion2")
-  contDes.style.display = (contDes.style.display === 'flex') ? 'none' : 'flex';
 
-}
-)
-BotonElim.addEventListener("click",()=>{
-  contDes.style.display = (contDes.style.display === 'none') ? 'flex' : 'none';
-  DespReg.classList.toggle("Registro_sesion2")
-  contDes.classList.toggle("Registro_sesion2")
-})
 
-//InicioSesion
-BotonIngre.addEventListener("click", ()=>{
-  DespIncio.classList.toggle("inicio_sesion2")
-  ContIni.classList.toggle("inicio_sesion2")
-  ContIni.style.display = (ContIni.style.display === 'flex') ? 'none' : 'flex';
+  // window.addEventListener("load", function (event) {
+  //   let btnAumentar = document.getElementById("aumentar")
+  //   btnAumentar.addEventListener("click",()=>{
+  //     console.log("btn aumentar")
+  //   })
+  // });
 
-}
-)
-
-BotonElim2.addEventListener("click",()=>{
-  ContIni.style.display = (ContIni.style.display === 'none') ? 'flex' : 'none';
-  DespIncio.classList.toggle("Registro_sesion2")
-  ContIni.classList.toggle("Registro_sesion2")
-})
 
 

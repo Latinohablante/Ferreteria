@@ -30,7 +30,18 @@ Por eso, el encargado de la landing page fue Camilo Hernandez quien tuvo que apr
 
 ...
 
-El encargado de la base de datos y el controlador fue Christian Celis quien tuvo que aprender Firebase para cumplir con el requerimiento y también fue el encargado de hacer la conexión entre la base de datos y la vista a través del controlador.
+El encargado de la base de datos y el controlador fue Christian Celis quien tuvo que aprender Firebase para cumplir con el requerimiento de utilizar la base de datos con este método. Para ello se registró en la siguiente página web:
+
+* https://firebase.google.com/?gad_source=1&gclid=CjwKCAiAivGuBhBEEiwAWiFmYX1I0EjfMa3OpLrOCnC0Pj8zZdWDPTbRRV3WzK-6qARekzjjq1KzDRoCAgsQAvD_BwE&gclsrc=aw.ds&hl=es-419
+
+
+Y siguió los pasos de las siguiente documentación proveída por Firebase:
+
+* https://firebase.google.com/docs/firestore/quickstart?hl=es&authuser=0
+
+Usó FireStore Database, en donde creó la entidad llamada productos y asignó los id's en los documentos correspondientes junto con los campos de cada producto donde se incluye cantidad, categoría, nombre, precio y dirección relativa de la imagen. Luego, agregó el código correspondiente en  el archivo db.js ubicado en la carpeta db. También fue el encargado de hacer la conexión entre la base de datos y la vista a través del controlador utilizando el método get el cuál se encuentra definido en el archivo get.js en la carpeta models. Este archivo solicita la información de todos los productos a la base de datos Firebase y se guardan en un Array llamado data.
+
+El controlador ejecuta la función MostrarProductos(datos) que se encarga de mostrar los productos en la landing page.
 
 ...
 
