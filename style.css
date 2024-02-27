@@ -9,7 +9,7 @@
 }
 
 body{
-    padding: 0px 30px;
+
     background-color: rgb(238, 243, 241);
 }
 
@@ -20,11 +20,10 @@ body{
 
 .navbar{
     position: fixed; 
-    width: 97%;
+    width: 100%;
     border-radius: 10px;
     margin: 0 auto;
     z-index: 2;
-    
 }
 .NumCarrito{
     display: flex;
@@ -274,10 +273,13 @@ input{
 @media (max-width: 768px){
 
    .navbar{
-    width: 87.5%;
+    width: 99%;
     box-shadow: 0px 1px 3px 3px rgba(128, 128, 128, 0.331);
     
    } 
+   .nav_ham{
+    transition: all 1.5s ease-out;
+   }
 
    .imagen_envio{
     display: flex; 
@@ -291,6 +293,17 @@ input{
 .imagen_inicio_cel{
     display: flex
 
+}
+.inicio_sesion{
+    
+    width: 60%;
+    padding: 30px;
+  
+}
+.Registro_sesion{
+    
+    width: 60%;
+   
 }
 
 

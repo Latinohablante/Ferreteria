@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-        const verMas = document.getElementById("VERMAS")
-        verMas.classList.toggle("VERMAS")
+        el.classList.toggle('nav_ham');
+        $target.classList.toggle('nav_ham');
+        
       });
     });
   
