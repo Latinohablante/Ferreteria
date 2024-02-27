@@ -43,6 +43,10 @@ h1{
     height: auto;
     margin-bottom: 20px;
 }
+#Botones-Cont{
+    display: flex;
+    gap: 8px;
+}
 
 .Filtrado{
  display: flex;

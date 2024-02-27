@@ -20,12 +20,17 @@ export function mostrarProductosEnHTML(categorias) {
       
       if (contenedor) {
         productos.forEach(producto => {
-          productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br>  <img src="${producto.urlImg}" alt=""> 
+          productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br> 
+           <img src="${producto.urlImg}" alt=""> 
+          
+          <div id="contenedorPrecio">
+          Precio: ${producto.precio}
+          </div>
+          <div id="Botones-Cont">
           <button style="cursor: pointer ;" class = "is-primary" id="disminuir">-</button>
           <p id="DatosContador">0</p>
-          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>Precio: ${producto.precio}
-          <div id="contenedorPrecio">
-          </div>
+          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>
+          </div> 
           </div> 
           `;
           contenedor.innerHTML += productoHTML;
