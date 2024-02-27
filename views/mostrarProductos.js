@@ -32,7 +32,7 @@ export function mostrarProductosEnHTML(categorias) {
             <button class="button is-primary">-</button>
           </div>
           <div class="control">
-            <p id="P_0">0</p>         
+            <button class="button is-primary">0</button>
           </div>
           <div class="control">
             <button class="button is-primary">+</button>
