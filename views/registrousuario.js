@@ -30,10 +30,8 @@ export let btnElim = BotonElim.addEventListener("click",()=>{
 
 
 export function registroUsuario(){
-    let frmRegistro = document.getElementById("formRegistro")
-    let frmdata = new FormData(frmRegistro)
-    console.log(frmdata)
-}
+   
+  }
 
 
 
@@ -41,11 +39,17 @@ let btnRegUsu = document.getElementById("BotonRegistrarse")
 
 btnRegUsu.addEventListener("click",(e)=>{
     e.preventDefault()
+    console.log("estoy aqui")
+    registroUsuario()
+    let list = []
+    let frmdata = new FormData(document.getElementById("formRegistro"))
 
 
-
-
-    e.stopPropagation()
+    for(e of frmdata){
+      list.push(e[1])
+    }
+    console.log(list)
+    e.stopPropagation
 
 
 //   registroUsuario()
