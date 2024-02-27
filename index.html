@@ -52,6 +52,8 @@
 </div>
 <!--Fin Inicio sesion-->
   <!--Registro sesion-->
+  <form action="">
+
   <div id="containerRegistro" class="containerRegistro2" >
   <section id="Registro" class="box Registro_sesion">
     <div id="BotonElim">
@@ -110,11 +112,12 @@
   
   <div class="field ">
     <div class="control">
-      <button id="BotonRegistrarse" class="button is-link">Registrarme</button>
+      <input type="button" id="BotonRegistrarse" class="button is-link">Registrarme</button>
     </div>
   </div>
 </section>
 </div>
+</form>
   <!--Fin Registro de sesion-->
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
@@ -219,7 +222,9 @@
           <!--CONTENEDOR HERRAMIENTAS-->
       <section class="Herramientas sc box" mobile>
          <section id="HerramientasTotal" mobile>
-          
+          <button style="cursor: pointer ;" class = "is-primary" id="disminuir">-</button>
+          <p id="DatosContador">0</p>
+          <button style="cursor: pointer ;" class = "is-primary" id="aumentar">+</button>
          </section>
       </section>
       
@@ -271,8 +276,8 @@
     </footer>
     
 
-    <script type="module" src="./db/db.js"></script>
-    <script type="module" src="./views/mostrarProductos.js"> </script>
-    <script type="module" src="./views/filter.js"> </script>
+    <script defer type="module" src="./db/db.js"></script>
+    <script defer  type="module" src="./views/mostrarProductos.js"> </script>
+    <script defer  type="module" src="./views/filter.js"> </script>
 </body>
 </html>
