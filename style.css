@@ -15,9 +15,15 @@ body{
 }
 
 .navbar{
-     position: fixed; 
-    width: 100%;
+    position: fixed; 
+    width: 97%;
     border-radius: 10px;
+    margin: 0 auto;
+    z-index: 0;
+    
+}
+#P_0{
+    margin: 7px;
 }
 
 
@@ -102,11 +108,12 @@ footer,img{
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    transition: all 0.5 ease-in-out;
+    transition: 0.5s;
  
     }
     .herramientasDIV:hover{
         box-shadow: 2px 5px 5px 0px rgba(13, 13, 13, 0.522);
+        transition: 0.5s;
         
     }
     .herramientasDIV>img{
@@ -166,6 +173,7 @@ footer,img{
         flex-direction: column;
         margin: 0 auto;
         z-index: 3;  
+        
     }
     #containerRegistro,#containerInicio{
         width: 100%;
@@ -174,14 +182,14 @@ footer,img{
         justify-content: center;
         align-items: center;
         position: fixed;
-        filter: blur(10);
-        background-color: rgba(80, 80, 80, 0.575);
+        backdrop-filter: blur(5px);
     }
     #BotonElim{
     display: flex;
     justify-content: end;
     align-items: end;
     width: 100%;
+    transition: 0.5s;
     }
  
   .inicio_sesion2{
@@ -196,6 +204,7 @@ footer,img{
     flex-direction: column;
     margin: 0 auto;
     z-index: 3;  
+    transition: 0.5s;
 }
 .inicio_sesion{
     display: flex;
