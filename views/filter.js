@@ -26,6 +26,21 @@ export function productosCategoria (data) {
             e.preventDefault();
             categoriaMap = mapCategorias.get(summaryClass[i].childNodes[0].innerText);
 
+            //Cambiar el color del selecionado
+            for (let j = 0; j< summaryClass.length; j++) {
+                if (j != i) {
+                    summaryClass[j].style.backgroundColor = "#88DC65";
+                     
+                    //summaryClass[j].childNodes[0].style.color = "black";
+                    console.log("AQUÏ!!!")
+                }
+            }
+            
+            summaryClass[i].style.backgroundColor = "white";
+            summaryClass[i].childNodes[0].style.color = "black";
+            console.log("BackGround Color", summaryClass[i].style.backgroundColor);
+            console.log("Color Style", summaryClass[i].childNodes[0].style.color);
+
             //Elimina todos los divs existentes en la sección con id "HerramientasTotales"
             while (sectionProducts.firstChild) {
                 sectionProducts.removeChild(sectionProducts.lastChild);
