@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen:wght@300;400;700&family=Sora:wght@100..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@100..800&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 *{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 body{
@@ -19,8 +23,23 @@ body{
     width: 97%;
     border-radius: 10px;
     margin: 0 auto;
-    z-index: 0;
+    z-index: 2;
     
+}
+.NumCarrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    bottom: 6px;
+    right: 5px;
+}
+#VERMAS{
+    display:none ;
 }
 #P_0{
     margin: 7px;
@@ -35,8 +54,9 @@ body{
 }
 h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding: 8px;
+    font-family: "Oxygen", sans-serif;
 }
 .containerP{
     border-radius: 10px;
@@ -61,26 +81,33 @@ h1{
  gap: 10px;
  z-index: 2;
  position: fixed;
- background-color: rgba(80, 206, 41, 0.733);
+ background-color: #00C4A7;
  width: auto;
  height: auto;
  border-radius: 10px;
  padding: 10px;
+ z-index: 1;
+ color: black;
 }
 summary{
     list-style: none;
     cursor: pointer;
+    background-color: rgba(240, 248, 255, 0);
+    text-decoration: none;
+    padding: 4px;   
+    border-radius: 5px; 
+}
+
+
+summary:hover{
+    color: black;
+    background-color: #01ddbc;
+}
+summary a{
+    color: black;
 }
 .Filtrado:hover{
-    background-color: rgb(130, 238, 157);
-}
-
-summary:before{
-content: "";
-}
-
-summary:hover a {
-    background-color: #B0F2C2;
+    background-color: #00d6b6;
 }
 
 .productos{
@@ -90,6 +117,7 @@ summary:hover a {
     flex-direction: row;
     text-align: center;
 }
+
 .navnbar{
     position: fixed;
 }
@@ -114,6 +142,7 @@ footer,img{
     .herramientasDIV:hover{
         box-shadow: 2px 5px 5px 0px rgba(13, 13, 13, 0.522);
         transition: 0.5s;
+        color: rgb(0, 0, 0);
         
     }
     .herramientasDIV>img{
@@ -126,7 +155,7 @@ footer,img{
         transform: scale(1.1);
     }
     .herramientasDIV button{
-        background-color: rgb(72, 199, 142);
+        background-color: rgb(0, 0, 0);
         border: none;
         border-radius: 5px;
         width: 30px;
@@ -234,5 +263,38 @@ input{
     padding: 30px;
     margin: 10px;
 }
+.imagen_envio{
+    display: none;
+}
+.imagen_inicio_cel{
+    display: none;
+}
+
+
+@media (max-width: 768px){
+
+   .navbar{
+    width: 87.5%;
+    box-shadow: 0px 1px 3px 3px rgba(128, 128, 128, 0.331);
+    
+   } 
+
+   .imagen_envio{
+    display: flex; 
+    width: 98% ;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.imagen_inicio{
+    display: none;
+}
+.imagen_inicio_cel{
+    display: flex
+
+}
+
+
+}
+
 
 
