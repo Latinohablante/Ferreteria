@@ -1,13 +1,15 @@
 import { control } from "../controller/controller.js";
 import { registroUsuario} from "./registrousuario.js";
 import {} from "./iniciosesion.js" 
+import { productosCategoria } from "../views/filter.js";
+import { AgregarProducto } from "../views/CarritoCompras.js";
 
 control("ObtenerProducto");
 
 let categorias = [];
-
 let listaproductos = []
 
+console.log(listaproductos)
 
 export function mostrarProductosEnHTML(categorias) {
   let productoHTML = "";
@@ -66,12 +68,19 @@ export function mostrarProductosEnHTML(categorias) {
 
 
 
-
-
-
-export function Mostrarproductos(data) {
-
+export function ObtenerProducto(data){
   listaproductos = data
+  Mostrarproductos(data)
+  productosCategoria(data)
+  AgregarProducto(data)
+}
+
+
+
+
+function Mostrarproductos(data) {
+
+
   //
   if (Array.isArray(data) && data.length > 0) {
 
