@@ -1,5 +1,4 @@
 
-
 const Registrar = document.getElementById("Bresgistrar");
 const DespReg = document.getElementById("Registro");
 const contDes = document.getElementById("containerRegistro");
