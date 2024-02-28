@@ -14,8 +14,8 @@ export async function control(entidad){
         case "FiltrarProducto":
                 productosCategoria(datos)
             break;
-        case "CarritoCompras"   :
-               AgregarProducto (datos)
+        case "CarritoCompras":
+               AgregarProducto(datos)
             break
     
         default:
