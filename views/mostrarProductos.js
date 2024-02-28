@@ -1,19 +1,15 @@
 import { control } from "../controller/controller.js";
 import { registroUsuario} from "./registrousuario.js";
 import {} from "./iniciosesion.js" 
+import { productosCategoria } from "../views/filter.js";
+import { AgregarProducto } from "../views/CarritoCompras.js";
 
 control("ObtenerProducto");
 
-
 let categorias = [];
-
-let cont= 0
-console.log(categorias)
-
-
-
 let listaproductos = []
 
+console.log(listaproductos)
 
 export function mostrarProductosEnHTML(categorias) {
   let productoHTML = "";
@@ -66,23 +62,25 @@ export function mostrarProductosEnHTML(categorias) {
   enviarbusqueda.addEventListener("click",()=>{
     let bproducto = document.getElementById("bproducto")
     let valorbusqueda = bproducto.value
-    console.log(typeof(valorbusqueda))
-    console.log(listaproductos)
-    let lp = listaproductos.filter( (list)=>{
-        list.nombre.includes(valorbusqueda)
-    });
-    console.log(lp)
+    console.log("")
   
   })
 
 
 
-
-
-
-export function Mostrarproductos(data) {
-
+export function ObtenerProducto(data){
   listaproductos = data
+  Mostrarproductos(data)
+  productosCategoria(data)
+  AgregarProducto(data)
+}
+
+
+
+
+function Mostrarproductos(data) {
+
+
   //
   if (Array.isArray(data) && data.length > 0) {
 
@@ -106,46 +104,6 @@ export function Mostrarproductos(data) {
   }
 }
 
-
-let ves = 0;
-
-// document.addEventListener("DOMContentLoaded", function () {
-
-//   let contador = document.getElementById("DatosContador")
-//   contador.textContent = 0;
-
-//   let cont = document.getElementById('aumentar');
-//   let contMenos = document.getElementById('disminuir');
-
-//   if (cont && contMenos && p) {
-//     cont.addEventListener('click', () => {
-//       ves++;
-//       contador.textContent = ves;
-//     });
-
-//     contMenos.addEventListener('click', () => {
-//       if (ves > 0) {
-//         ves--;
-//       }
-//       contador.textContent = ves;
-//     });
-//   } else {
-//     console.error("No se encontraron algunos elementos en el DOM.");
-//   }
-// });
-
-//window.addEventListener("DOMContentLoaded", function (event) {
-    
-//});
-
-
-
-  // window.addEventListener("load", function (event) {
-  //   let btnAumentar = document.getElementById("aumentar")
-  //   btnAumentar.addEventListener("click",()=>{
-  //     console.log("btn aumentar")
-  //   })
-  // });
 
 
 
