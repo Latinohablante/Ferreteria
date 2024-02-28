@@ -6,10 +6,10 @@ import { AgregarProducto } from "../views/CarritoCompras.js";
 
 control("ObtenerProducto");
 
-let categorias = [];
+export let categorias = [];
 let listaproductos = []
 
-console.log(listaproductos)
+console.log(categorias)
 
 export function mostrarProductosEnHTML(categorias) {
   let productoHTML = "";
@@ -37,12 +37,16 @@ export function mostrarProductosEnHTML(categorias) {
             <button class="button is-link contador">0</button>
           </div>
           <div class="control">
-            <button class="button is-primary aumentar">+</button>
+            <button id="Agg" class="button  is-primary aumentar">+</button>
           </div>
           </div> 
           </div> 
           `;
           contenedor.innerHTML += productoHTML;
+
+         
+          
+         
           
         });
         
@@ -65,6 +69,7 @@ export function mostrarProductosEnHTML(categorias) {
     console.log("")
   
   })
+ 
 
 
 

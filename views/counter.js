@@ -1,11 +1,11 @@
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
+export let counter = document.addEventListener("DOMContentLoaded", () => {
+    let cont;
+    let numCont;
 
     document.body.addEventListener("click", (e) => {
-        let cont;
-        let numCont;
+        
         const carritoDiv = document.getElementsByClassName("NumCarrito");
         let numCarrito = carritoDiv[0].innerText;
         //console.log(carritoDiv[0].innerText);
