@@ -2,9 +2,9 @@ import { control } from "../controller/controller.js";
 
 control("CarritoCompras");
 
-let categorias = []
+let categorias = {}
 
-console.log(categorias) 
+
 
 const botonComprar = document.getElementById("BotonComprar")
 const targeta = document.getElementById("ContCarrito")
@@ -25,8 +25,7 @@ botonComprar.addEventListener("click",()=>{
     AgregarProducto(producto)
 })
 
-
-export function AgregarProducto(data){
+export function AgregarProducto(data) {
     if (Array.isArray(data) && data.length > 0) {
   
       data.forEach(producto => {
@@ -36,6 +35,7 @@ export function AgregarProducto(data){
             categorias[producto.categoria] = [];
           }
           categorias[producto.categoria].push(producto);
+          console.log(Object.keys(categorias).length) 
         } else {
           console.error("El producto no tiene una propiedad 'categoria' definida.");
         }
