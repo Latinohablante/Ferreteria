@@ -30,9 +30,9 @@
 
     <form id="formularioInicioSesion">
       <div class="field">
-        <label class="label">Nombre usuario</label>
+        <label class="label" for="nombre">Nombre usuario</label>
         <div class="control has-icons-left has-icons-right">
-          <input id="inicioUsuario" class="input is-success" type="text" placeholder="Username" required>
+          <input id="inicioUsuario" name="nombre" class="input is-success" type="text" placeholder="Username" required>
           <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </span>
@@ -43,9 +43,9 @@
       </div>
 
       <div class="field">
-        <label class="label">Contraseña</label>
+        <label class="label" for="contraseña">Contraseña</label>
         <div class="control has-icons-left has-icons-right">
-          <input id="inicioContraseña" class="input is-success" type="password" placeholder="Contraseña" required>
+          <input id="inicioContraseña" name="contraseña" class="input is-success" type="password" placeholder="Contraseña" required>
           <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
@@ -125,7 +125,7 @@
   
   <div class="field ">
     <div class="control">
-      <input type="button" id="BotonRegistrarse" class="button is-success is-outlined">Registrarme</input>
+      <button type="button" id="BotonRegistrarse" class="button is-success is-outlined">Registrarme</button>
     </div>
   </div>
 </section>
@@ -154,10 +154,16 @@
             <a class="navbar-item">
               Promociones
             </a>
+
+          
       
             <div  class="VERMAS navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 Ver mas
+              </a>
+
+              <a id="aggNombre" class="navbar-item">
+              
               </a>
       
               <div class="navbar-dropdown">
