@@ -10,8 +10,12 @@
     <title>Document</title>
 </head>
 <body>
- 
-  <!--Inicio sesion-->
+ <!--Carro compras-->
+ <main id="ContCarrito">
+
+ </main>
+<!--Fin Carrito compras-->
+ <!--Inicio sesion-->
 <div id="containerInicio" class="containerInicio2">
   <section id="Inicio" class="box inicio_sesion">
     <div id="BotonElim2">
@@ -177,7 +181,7 @@
                 <a id="Binicio" class="button is-light">
                   Ingresar
                 </a>
-                <a class="button is-white" href="">
+                <a id="BotonComprar" class="button is-white" href="">
                     <img src="./Imagenes/pag_principal/carritoCompras.png" alt="">
                     <div class="is-primary has-background-success NumCarrito"></div>
                 </a>
@@ -214,6 +218,21 @@
       <details name ="Prod">
         <summary><a href="#ProdTitulo">Todos</a></summary>
       </div>
+      <!-- Main container -->
+      <div id="ContBusqueda">
+<main class="level">
+  <div class="field has-addons">
+    <div class="control">
+      <input id="bproducto" class="input" type="text" placeholder="Busca un Producto">
+    </div>
+    <div class="control">
+      <a id="enviarbusqueda" class="button is-success">
+        Buscar
+      </a>
+    </div>
+  </div>
+</div>
+      
       <h1 id="ProdTitulo">Productos</h1>
 
       <header class="containerP" id="containerP">
@@ -287,5 +306,7 @@
     <script defer  type="module" src="./views/filter.js"> </script>
     <script defer type="module" src="./views/navbar.js"></script>
     <script defer type="module" src="./views/counter.js"></script>
+    <script src="./views/CarritoCompras.js"></script>
+    
 </body>
 </html>
