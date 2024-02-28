@@ -30,9 +30,6 @@ export function productosCategoria (data) {
             for (let j = 0; j< summaryClass.length; j++) {
                 if (j != i) {
                     summaryClass[j].style.backgroundColor = "#39ca89";
-                     
-                    //summaryClass[j].childNodes[0].style.color = "black";
-                    console.log("AQUÏ!!!")
                 }
             }
             
