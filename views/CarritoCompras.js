@@ -13,7 +13,7 @@ botonComprar.addEventListener("click",()=>{
     targeta.innerHTML = `
     <div id="TargetaUnica" class="box">
     <button  class="delete is-large"></button>
-      <p> Nombre: ${producto[1]} </p>
+      <p> Nombre: </p>
       <img src="" alt="">
       <p>Cantidad: </p>
       <p>Total: </p>
@@ -44,4 +44,3 @@ export function AgregarProducto(producto) {
       console.error("La respuesta del servidor no es un array válido o está vacía.");
     }
   }
-  AgregarProducto()
