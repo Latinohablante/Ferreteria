@@ -6,7 +6,12 @@ control("ObtenerProducto");
 
 
 let categorias = [];
+
 let cont= 0
+
+
+
+let listaproductos = []
 
 
 export function mostrarProductosEnHTML(categorias) {
@@ -52,7 +57,31 @@ export function mostrarProductosEnHTML(categorias) {
 }
 
 
+
+
+
+  let enviarbusqueda = document.getElementById("enviarbusqueda")
+
+  enviarbusqueda.addEventListener("click",()=>{
+    let bproducto = document.getElementById("bproducto")
+    let valorbusqueda = bproducto.value
+    console.log(typeof(valorbusqueda))
+    console.log(listaproductos)
+    let lp = listaproductos.filter( (list)=>{
+        list.nombre.includes(valorbusqueda)
+    });
+    console.log(lp)
+  
+  })
+
+
+
+
+
+
 export function Mostrarproductos(data) {
+
+  listaproductos = data
   //
   if (Array.isArray(data) && data.length > 0) {
 
