@@ -57,7 +57,13 @@ export function mostrarProductosEnHTML(categorias) {
   }
 }
 
+let bproducto = document.getElementById("bproducto")
 
+bproducto.addEventListener("focus",()=>{
+  if(bproducto.value===""){
+    Mostrarproductos(listaproductos)
+  }
+})
 
 
 
@@ -72,6 +78,8 @@ export function mostrarProductosEnHTML(categorias) {
         MostrarBusqueda(resultados)
     } else {
       console.log('Objetos no encontrados');
+      MostrarBusqueda(resultados)
+
     };
   
   })
