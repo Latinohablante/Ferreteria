@@ -1,19 +1,15 @@
 import { control } from "../controller/controller.js";
 import { registroUsuario} from "./registrousuario.js";
 import {} from "./iniciosesion.js" 
+import { productosCategoria } from "../views/filter.js";
+import { AgregarProducto } from "../views/CarritoCompras.js";
 
 control("ObtenerProducto");
 
-
-let categorias = [];
-
-let cont= 0
-console.log(categorias)
-
-
-
+export let categorias = [];
 let listaproductos = []
 
+console.log(categorias)
 
 export function mostrarProductosEnHTML(categorias) {
   let productoHTML = "";
@@ -41,12 +37,16 @@ export function mostrarProductosEnHTML(categorias) {
             <button class="button is-link contador">0</button>
           </div>
           <div class="control">
-            <button class="button is-primary aumentar">+</button>
+            <button id="Agg" class="button  is-primary aumentar">+</button>
           </div>
           </div> 
           </div> 
           `;
           contenedor.innerHTML += productoHTML;
+
+         
+          
+         
           
         });
         
@@ -57,7 +57,13 @@ export function mostrarProductosEnHTML(categorias) {
   }
 }
 
+let bproducto = document.getElementById("bproducto")
 
+bproducto.addEventListener("focus",()=>{
+  if(bproducto.value===""){
+    Mostrarproductos(listaproductos)
+  }
+})
 
 
 
@@ -65,24 +71,76 @@ export function mostrarProductosEnHTML(categorias) {
 
   enviarbusqueda.addEventListener("click",()=>{
     let bproducto = document.getElementById("bproducto")
-    let valorbusqueda = bproducto.value
-    console.log(typeof(valorbusqueda))
-    console.log(listaproductos)
-    let lp = listaproductos.filter( (list)=>{
-        list.nombre.includes(valorbusqueda)
-    });
-    console.log(lp)
+    let valorbusqueda = (bproducto.value).toLowerCase()
+
+    const resultados = listaproductos.filter(objeto => JSON.stringify(((objeto.nombre).toLowerCase())).includes(valorbusqueda));
+    if (resultados.length > 0) {
+        MostrarBusqueda(resultados)
+    } else {
+      console.log('Objetos no encontrados');
+      MostrarBusqueda(resultados)
+
+    };
   
   })
 
+ function MostrarBusqueda(resultados){
+    const contenedor = document.getElementById('HerramientasTotal');
+    contenedor.textContent = ""
+    let headProductos = document.getElementById("ProdTitulo");
+    headProductos.innerHTML = `Productos <em>(${resultados.length} disponibles)</em>`
+
+    resultados.forEach((e)=>{
+      AgregarProduct(e)
+    })
+ }
+
+
+ function AgregarProduct(producto){
+  const contenedor = document.getElementById('HerramientasTotal');
+ let  productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br> 
+  <img src="${producto.urlImg}" alt=""> 
+ 
+ <div id="contenedorPrecio">
+ Precio: ${producto.precio}
+ </div>
+ <div id="Botones-Cont">
+ <div class="field has-addons">
+ <div class="control">
+   <button class="button is-primary restar">-</button>
+ </div>
+ <div class="control">
+   <button class="button is-link contador">0</button>
+ </div>
+ <div class="control">
+   <button id="Agg" class="button  is-primary aumentar">+</button>
+ </div>
+ </div> 
+ </div> 
+ `;
+ contenedor.innerHTML += productoHTML;
+
+ }
+
+
+ 
+
+
+ 
 
 
 
-
-
-export function Mostrarproductos(data) {
-
+export function ObtenerProducto(data){
   listaproductos = data
+  Mostrarproductos(listaproductos)
+  productosCategoria(listaproductos)
+  AgregarProducto(listaproductos)
+}
+
+
+
+
+function Mostrarproductos(data) {
   //
   if (Array.isArray(data) && data.length > 0) {
 
@@ -97,55 +155,13 @@ export function Mostrarproductos(data) {
         console.error("El producto no tiene una propiedad 'categoria' definida.");
       }
     });
-
     //console.log(categorias);
-
     mostrarProductosEnHTML(categorias);
   } else {
     console.error("La respuesta del servidor no es un array válido o está vacía.");
   }
 }
 
-
-let ves = 0;
-
-// document.addEventListener("DOMContentLoaded", function () {
-
-//   let contador = document.getElementById("DatosContador")
-//   contador.textContent = 0;
-
-//   let cont = document.getElementById('aumentar');
-//   let contMenos = document.getElementById('disminuir');
-
-//   if (cont && contMenos && p) {
-//     cont.addEventListener('click', () => {
-//       ves++;
-//       contador.textContent = ves;
-//     });
-
-//     contMenos.addEventListener('click', () => {
-//       if (ves > 0) {
-//         ves--;
-//       }
-//       contador.textContent = ves;
-//     });
-//   } else {
-//     console.error("No se encontraron algunos elementos en el DOM.");
-//   }
-// });
-
-//window.addEventListener("DOMContentLoaded", function (event) {
-    
-//});
-
-
-
-  // window.addEventListener("load", function (event) {
-  //   let btnAumentar = document.getElementById("aumentar")
-  //   btnAumentar.addEventListener("click",()=>{
-  //     console.log("btn aumentar")
-  //   })
-  // });
 
 
 

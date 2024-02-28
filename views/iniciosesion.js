@@ -1,22 +1,41 @@
-
-const BotonIngre = document.getElementById("Binicio")
-const DespIncio = document.getElementById("Inicio")
-const ContIni = document.getElementById("containerInicio")
-const BotonElim2 = document.getElementById("BotonElim2")
+const BotonIngre = document.getElementById("Binicio");
+const ContIni = document.getElementById("containerInicio");
+const botonIniciarSesion = document.getElementById("IngresarInicio");
 
 
-//InicioSesion
-export let btningresar= BotonIngre.addEventListener("click", ()=>{
-  DespIncio.classList.toggle("inicio_sesion2")
-  ContIni.classList.toggle("inicio_sesion2")
-  ContIni.style.display = (ContIni.style.display === 'flex') ? 'none' : 'flex';
-}
-)
+BotonIngre.addEventListener("click", () => {
+  ContIni.style.display = ContIni.style.display === "flex" ? "none" : "flex";
+});
+
+botonIniciarSesion.addEventListener("click", () => {
+  let formData = new FormData(document.getElementById("formularioInicioSesion"));
+  let usuarioInicioSesion = {};
+
+  formData.forEach((value, key) => {
+    usuarioInicioSesion[key] = value;
+  });
 
 
-export let btnelim2 = BotonElim2.addEventListener("click",()=>{
-  ContIni.style.display = (ContIni.style.display === 'none') ? 'flex' : 'none';
-  DespIncio.classList.toggle("Registro_sesion2")
-  ContIni.classList.toggle("Registro_sesion2")
-})
+  let listaUsuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+  console.log("Lista de usuarios:", listaUsuarios)
+ 
+  let usuarioRegistrado = listaUsuarios.find(
+    (usuario) =>
+      usuario.nombreusuario === usuarioInicioSesion.inicioUsuario &&
+      usuario.contraseña === usuarioInicioSesion.inicioContraseña
+  );
+
+  if (usuarioRegistrado) {
+ 
+    sessionStorage.setItem("usuarioSesion", JSON.stringify({
+      nombreusuario: usuarioRegistrado.nombreusuario
+      
+    
+    }));
+ 
+    window.location.href = "/ruta-de-la-pagina-principal";
+  } else {
+    alert("Usuario no registrado");
+  }
+});
