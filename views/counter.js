@@ -11,10 +11,11 @@ export let counter = document.addEventListener("DOMContentLoaded", () => {
         //console.log(carritoDiv[0].innerText);
         if (e.target.innerText == "+") {
             //console.log("DEBO SUMAR");
-            console.log("El div que hay arriba", document.elementFromPoint(e.x, e.y + 20).children[1].attributes[0])
+            console.log("El div que hay arriba", document.elementFromPoint(e.x + 30, e.y).children[0].innerText)
+            //console.log("Precio", document.elementFromPoint(e.x, e.y - 20).children[2].innerText)
             numCarrito = carritoDiv[0].innerText;
-            cont = document.elementFromPoint(e.x -30, e.y);
-            numCont = document.elementFromPoint(e.x -30, e.y).innerText;
+            cont = document.elementFromPoint(e.x - 30, e.y);
+            numCont = document.elementFromPoint(e.x - 30, e.y).innerText;
             document.elementFromPoint(e.x -30, e.y).innerText = `${Number(numCont) + 1}`
             if (numCarrito == "") {
                 carritoDiv[0].innerText = "1";

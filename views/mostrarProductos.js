@@ -22,7 +22,7 @@ export function mostrarProductosEnHTML(categorias) {
       
       if (contenedor) {
         productos.forEach(producto => {
-          productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br> 
+          productoHTML = `<div class="herramientasDIV box is-mobile"> <b>${producto.nombre}</b> <br> 
            <img src="${producto.urlImg}" alt=""> 
           
           <div id="contenedorPrecio">
