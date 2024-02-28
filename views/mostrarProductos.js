@@ -66,16 +66,54 @@ export function mostrarProductosEnHTML(categorias) {
   enviarbusqueda.addEventListener("click",()=>{
     let bproducto = document.getElementById("bproducto")
     let valorbusqueda = (bproducto.value).toLowerCase()
-    console.log(valorbusqueda)
+
     const resultados = listaproductos.filter(objeto => JSON.stringify(((objeto.nombre).toLowerCase())).includes(valorbusqueda));
     if (resultados.length > 0) {
-      console.log('Objetos encontrados:', resultados);
-        Mostrarproductos(resultados)
+        MostrarBusqueda(resultados)
     } else {
       console.log('Objetos no encontrados');
     };
   
   })
+
+ function MostrarBusqueda(resultados){
+    const contenedor = document.getElementById('HerramientasTotal');
+    contenedor.textContent = ""
+    let headProductos = document.getElementById("ProdTitulo");
+    headProductos.innerHTML = `Productos <em>(${resultados.length} disponibles)</em>`
+
+    resultados.forEach((e)=>{
+      AgregarProduct(e)
+    })
+ }
+
+
+ function AgregarProduct(producto){
+  const contenedor = document.getElementById('HerramientasTotal');
+ let  productoHTML = `<div class="herramientasDIV box is-mobile"> ${producto.nombre} <br> 
+  <img src="${producto.urlImg}" alt=""> 
+ 
+ <div id="contenedorPrecio">
+ Precio: ${producto.precio}
+ </div>
+ <div id="Botones-Cont">
+ <div class="field has-addons">
+ <div class="control">
+   <button class="button is-primary restar">-</button>
+ </div>
+ <div class="control">
+   <button class="button is-link contador">0</button>
+ </div>
+ <div class="control">
+   <button id="Agg" class="button  is-primary aumentar">+</button>
+ </div>
+ </div> 
+ </div> 
+ `;
+ contenedor.innerHTML += productoHTML;
+
+ }
+
 
  
 
