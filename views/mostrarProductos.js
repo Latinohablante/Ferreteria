@@ -64,13 +64,7 @@ export function mostrarProductosEnHTML(categorias) {
   let enviarbusqueda = document.getElementById("enviarbusqueda")
 
   enviarbusqueda.addEventListener("click",()=>{
-     let productosabuscar = []
     let bproducto = document.getElementById("bproducto")
-    let valorbusqueda = bproducto.value
-    console.log("")
-  
-  })
-
     let valorbusqueda = (bproducto.value).toLowerCase()
     console.log(valorbusqueda)
     const resultados = listaproductos.filter(objeto => JSON.stringify(((objeto.nombre).toLowerCase())).includes(valorbusqueda));
@@ -80,6 +74,10 @@ export function mostrarProductosEnHTML(categorias) {
     } else {
       console.log('Objetos no encontrados');
     };
+  
+  })
+
+ 
 
 
  
