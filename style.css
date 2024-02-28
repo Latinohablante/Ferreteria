@@ -7,6 +7,15 @@
   font-weight: weight;
   font-style: normal;
 }
+#ContBusqueda{
+    display: flex;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 
 body{
 
@@ -16,6 +25,9 @@ body{
 .imagen_inicio{
     width: 100%;
     height: auto;
+}
+.input{
+    width: 300px;
 }
 
 .navbar{
@@ -80,13 +92,14 @@ h1{
  gap: 10px;
  z-index: 2;
  position: fixed;
- background-color: #00C4A7;
+ background-color: #39ca89;
  width: auto;
  height: auto;
  border-radius: 10px;
  padding: 10px;
  z-index: 1;
  color: black;
+ margin-left: 15px;
 }
 summary{
     list-style: none;
@@ -100,13 +113,13 @@ summary{
 
 summary:hover{
     color: black;
-    background-color: #01ddbc;
+    background-color: #3cc286;
 }
 summary a{
     color: black;
 }
 .Filtrado:hover{
-    background-color: #00d6b6;
+    background-color: #39ca89;
 }
 
 .productos{
@@ -257,10 +270,6 @@ footer,img{
 
 .ing{
     margin: 20px;
-}
-input{
-    padding: 30px;
-    margin: 10px;
 }
 .imagen_envio{
     display: none;

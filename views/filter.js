@@ -29,14 +29,14 @@ export function productosCategoria (data) {
             //Cambiar el color del selecionado
             for (let j = 0; j< summaryClass.length; j++) {
                 if (j != i) {
-                    summaryClass[j].style.backgroundColor = "#00C4A7";
+                    summaryClass[j].style.backgroundColor = "#39ca89";
                      
                     //summaryClass[j].childNodes[0].style.color = "black";
                     console.log("AQUÏ!!!")
                 }
             }
             
-            summaryClass[i].style.backgroundColor = "#00f2ce";
+            summaryClass[i].style.backgroundColor = "#52c08f";
             summaryClass[i].childNodes[0].style.color = "black";
             console.log("BackGround Color", summaryClass[i].style.backgroundColor);
             console.log("Color Style", summaryClass[i].childNodes[0].style.color);
