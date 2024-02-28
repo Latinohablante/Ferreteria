@@ -25,10 +25,7 @@ botonComprar.addEventListener("click",()=>{
     AgregarProducto(producto)
 })
 
-
-
 export function AgregarProducto(data) {
-
     if (Array.isArray(data) && data.length > 0) {
   
       data.forEach(producto => {
