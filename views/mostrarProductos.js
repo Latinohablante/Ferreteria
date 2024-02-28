@@ -29,13 +29,13 @@ export function mostrarProductosEnHTML(categorias) {
           <div id="Botones-Cont">
           <div class="field has-addons">
           <div class="control">
-            <button class="button is-primary">-</button>
+            <button class="button is-primary restar">-</button>
           </div>
           <div class="control">
-            <button class="button is-primary">0</button>
+            <button class="button is-link contador">0</button>
           </div>
           <div class="control">
-            <button class="button is-primary">+</button>
+            <button class="button is-primary aumentar">+</button>
           </div>
           </div> 
           </div> 
