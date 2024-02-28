@@ -64,28 +64,39 @@ export function mostrarProductosEnHTML(categorias) {
   let enviarbusqueda = document.getElementById("enviarbusqueda")
 
   enviarbusqueda.addEventListener("click",()=>{
+     let productosabuscar = []
     let bproducto = document.getElementById("bproducto")
     let valorbusqueda = bproducto.value
     console.log("")
   
   })
+
+    let valorbusqueda = (bproducto.value).toLowerCase()
+    console.log(valorbusqueda)
+    const resultados = listaproductos.filter(objeto => JSON.stringify(((objeto.nombre).toLowerCase())).includes(valorbusqueda));
+    if (resultados.length > 0) {
+      console.log('Objetos encontrados:', resultados);
+        Mostrarproductos(resultados)
+    } else {
+      console.log('Objetos no encontrados');
+    };
+
+
  
 
 
 
 export function ObtenerProducto(data){
   listaproductos = data
-  Mostrarproductos(data)
-  productosCategoria(data)
-  AgregarProducto(data)
+  Mostrarproductos(listaproductos)
+  productosCategoria(listaproductos)
+  AgregarProducto(listaproductos)
 }
 
 
 
 
 function Mostrarproductos(data) {
-
-
   //
   if (Array.isArray(data) && data.length > 0) {
 
@@ -100,9 +111,7 @@ function Mostrarproductos(data) {
         console.error("El producto no tiene una propiedad 'categoria' definida.");
       }
     });
-
     //console.log(categorias);
-
     mostrarProductosEnHTML(categorias);
   } else {
     console.error("La respuesta del servidor no es un array válido o está vacía.");
