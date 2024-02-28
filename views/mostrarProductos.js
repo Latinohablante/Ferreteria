@@ -79,9 +79,9 @@ export function mostrarProductosEnHTML(categorias) {
 
 export function ObtenerProducto(data){
   listaproductos = data
-  Mostrarproductos(data)
-  productosCategoria(data)
-  AgregarProducto(data)
+  Mostrarproductos(listaproductos)
+  productosCategoria(listaproductos)
+  AgregarProducto(listaproductos)
 }
 
 
