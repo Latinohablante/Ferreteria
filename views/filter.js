@@ -7,7 +7,8 @@ const mapCategorias = new Map([
     ["Herramientas", "Herramientas"],
     ["Corriente", "Luz"],
     ["Autos", "Para Autos"],
-    ["Llantas", "Llantas"]
+    ["Llantas", "Llantas"],
+    ["Todos", "Todos"]
 ])
 
 export function productosCategoria (data) {
@@ -47,6 +48,8 @@ export function productosCategoria (data) {
             data.forEach(el => {
                 if (el.categoria == categoriaMap) {
                     categoriaName = categoriaMap;
+                    productosFiltrados.push(el);
+                } else if (categoriaMap == "Todos") {
                     productosFiltrados.push(el);
                 }
             })
