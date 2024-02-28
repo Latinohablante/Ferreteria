@@ -8,6 +8,7 @@ control("ObtenerProducto");
 let categorias = [];
 
 let cont= 0
+console.log(categorias)
 
 
 
