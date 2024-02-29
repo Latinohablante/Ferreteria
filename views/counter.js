@@ -15,7 +15,7 @@ export let counter = document.addEventListener("DOMContentLoaded", () => {
         let nombreProducto;
         let imgProducto;
         let precioProducto;
-
+        let flag = "s";
         if (e.target.innerText == "+") {
             nombreProducto = document.elementFromPoint(e.x + 30, e.y).children[0].innerText;
             imgProducto =  document.elementFromPoint(e.x, e.y - 20).children[2].attributes[0].value;
@@ -38,7 +38,26 @@ export let counter = document.addEventListener("DOMContentLoaded", () => {
 
             }
             arrayProductoClick.push(nombreProducto, imgProducto, precioProducto.split(":")[1].trim(), numDIvCont);
-            console.log("array Producto", arrayProductoClick)
+            if (arrayProductosCarrito.length == 0) {
+                arrayProductosCarrito.push(arrayProductoClick)
+            } else {
+                for(let j = 0; j < arrayProductosCarrito.length; j++){
+                    if(arrayProductosCarrito[j][0] == nombreProducto ) {
+                        arrayProductosCarrito[j][3] = numDIvCont
+                        flag = "b"
+                        break
+                    }
+                }
+
+                if ( flag == "s"){
+                    arrayProductosCarrito.push(arrayProductoClick)
+                
+                }
+                }
+
+            
+            
+            console.log("array Producto", arrayProductosCarrito)
 
             
         } else if (e.target.innerText == "-") {
@@ -70,3 +89,4 @@ export let counter = document.addEventListener("DOMContentLoaded", () => {
     })
 
 })
+

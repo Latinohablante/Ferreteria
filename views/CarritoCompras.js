@@ -1,30 +1,56 @@
 import { control } from "../controller/controller.js";
 import { counter } from "./counter.js"
 import { categorias } from "./mostrarProductos.js"
+import  {arrayProductosCarrito} from "./counter.js"
 control("CarritoCompras");
+
+console.log(arrayProductosCarrito)
+
 
 
 
 console.log(categorias)
 
-
-const botonComprar = document.getElementById("BotonComprar")
-const targeta = document.getElementById("ContCarrito")
-botonComprar.addEventListener("click",()=>{
-    targeta.style.display = (targeta.style.display === 'flex') ? 'none' : 'flex';
-    targeta.innerHTML = `
-    <div id="TargetaUnica" class="box">
-    <button  class="delete is-large"></button>
-      <p> Nombre: </p>
-      <img src="" alt="">
-      <p>Cantidad: </p>
-      <p>Total: </p>
-      <p>Total a pagar </p>
+function aggProdDom(prod){
+  let targetacarrito = document.getElementById("ContCarrito")
+  targeta = `
+    <div id="TargetaUnica" class="">
+      <p> Nombre: ${prod[0]} </p>
+      <img src="${prod[1]}" alt="">
+      <p>Cantidad: ${prod[3]} </p>
+      <p>Precio unitario: $${prod[2]}</p>
+      <p>Total:$${prod[2]*prod[3]} </p>
       
     </div>`
-    console.log("hola")
-    console.log(producto)
-    AgregarProducto(producto)
+
+    targetacarrito.innerHTML += targeta
+
+}
+let total = 0;
+const botonComprar = document.getElementById("BotonComprar")
+let totalCArrito = document.getElementById("valorTotal")
+let targeta = document.getElementById("ContCarrito")
+
+botonComprar.addEventListener("click",()=>{
+    targeta.style.display = (targeta.style.display === 'flex') ? 'none' : 'flex';
+    arrayProductosCarrito.forEach(prod =>{
+      total += prod[3] * prod[2]
+      
+      console.time(total)
+      console.timeEnd(total)
+      totalCArrito.innerText = `Valor a pagar: $${total}`
+      
+  aggProdDom(prod)
+  
+    })
+    
+})
+
+
+const cerrarCarro = document.getElementById("CerrarCarrito")
+const botonelimca = document.getElementById("ContCarrito")
+cerrarCarro.addEventListener("click",()=>{
+  botonelimca.style.display = "none"
 })
 
 export function AgregarProducto(data) {
