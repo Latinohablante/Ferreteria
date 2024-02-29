@@ -69,26 +69,35 @@ body{
     flex-wrap: wrap;
     gap: 0;
     height: auto;
-    flex-direction: row;
+    flex-direction: column;
+    
 }
 #TargetaUnica>img{
     width: 70px;
     height: 70px;
 }
 #TargetaUnica{
-    width:auto;
+    display: flex;
+    flex-direction: row;
+    width:40%;
     height: auto;
     background-color: rgb(255, 255, 255);
     padding: 20px;
+    text-align: center;
+    border: solid 1px rgb(156, 156, 156);
     
 }
 #valorTotal{
     text-align: center;
     font-size: 28px;
     z-index: 50;
-    position: absolute;
-    bottom: 80px;
+    position: relative;
+ 
 
+}
+#TotalUnidad{
+    padding: 5px;
+    background-color: #28cd82;
 }
 
 

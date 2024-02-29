@@ -9,6 +9,9 @@ const desIni = document.getElementById("Inicio")
 BotonIngre.addEventListener("click", () => {
   ContIni.style.display = ContIni.style.display === "flex" ? "none" : "flex";
 });
+BotonElim.addEventListener("click", () => {
+  ContIni.style.display = ContIni.style.display === "flex" ? "none" : "flex";
+});
 
 
 botonIniciarSesion.addEventListener("click", (e) => {
